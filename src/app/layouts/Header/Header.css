@@ -1,0 +1,179 @@
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 70px;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: auto;
+  padding-left: 0;
+}
+
+.logo {
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 80%;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #667eea;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #667eea;
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.login-btn, .register-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.login-btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  background-color: #667eea;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.login-btn:hover {
+  background-color: #5a67d8;
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.2);
+}
+
+.register-btn {
+  background-color: #667eea;
+  color: white;
+}
+
+.register-btn:hover {
+  background-color: #5a6fd1;
+}
+
+.user-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background-color: #f7fafc;
+  border-radius: 20px;
+  font-weight: 500;
+  color: #2d3748;
+  font-size: 14px;
+}
+
+.user-name::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #48bb78;
+  border-radius: 50%;
+}
+
+.logout-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #e53e3e;
+  background-color: white;
+  color: #e53e3e;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logout-btn:hover {
+  background-color: #e53e3e;
+  color: white;
+  box-shadow: 0 2px 4px rgba(229, 62, 62, 0.2);
+}
+
+.brand-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, #2d3748, #4a5568);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.brand-title:hover {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .header-container {
+    padding: 1rem;
+  }
+
+  .brand-title {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+} 
