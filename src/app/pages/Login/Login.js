@@ -7,7 +7,7 @@ import Loading from '../../components/Loading/Loading';
 
 export default function Login() {
   const isLoading = sLogin.use();
-  const usernameRef = useRef('');
+  const usernameRef = useRef('admin');
   const passwordRef = useRef('');
   const navigate = useNavigate();
 

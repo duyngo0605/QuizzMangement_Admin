@@ -1,5 +1,4 @@
 import { BE_ENDPOINT, TOKEN } from "../../../settings/localVar";
-import { sUserInfo } from "../../../app/pages/Login/loginStore";
 
 const KEY = "adminDuy";
 const HEADERS = {
@@ -12,7 +11,7 @@ export const get = async (uri, onSuccess, onFail) => {
   const res = await fetch(BE_ENDPOINT + uri, {
     headers: {
       ...HEADERS,
-      token: localStorage.getItem(TOKEN),
+      Authorization: `Bearer ${localStorage.getItem(TOKEN)}`,
     },
   });
 
@@ -30,7 +29,7 @@ export const post = async (uri, reqData, onSuccess, onFail) => {
     method: "POST",
     headers: {
       ...HEADERS,
-      token: localStorage.getItem(TOKEN),
+      Authorization: `Bearer ${localStorage.getItem(TOKEN)}`,
     },
     body: JSON.stringify(reqData),
   });
@@ -49,7 +48,7 @@ export const put = async (uri, reqData, onSuccess, onFail) => {
     method: "PUT",
     headers: {
       ...HEADERS,
-      token: localStorage.getItem(TOKEN),
+      Authorization: `Bearer ${localStorage.getItem(TOKEN)}`,
     },
     body: JSON.stringify(reqData),
   });
@@ -68,7 +67,7 @@ export const del = async (uri, onSuccess, onFail) => {
     method: "DELETE",
     headers: {
       ...HEADERS,
-      token: localStorage.getItem(TOKEN),
+      Authorization: `Bearer ${localStorage.getItem(TOKEN)}`,
       },
   });
 

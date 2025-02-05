@@ -1,17 +1,12 @@
-import React from "react";
-import { sCount } from "./homeStore";
-
+import React, { useState, useEffect } from 'react';
+import { Card, Button, InputNumber, message, Select, Row, Col, Tabs, Input, Modal } from 'antd';
+import Sidebar from '../../components/Sidebar';
+import './home.css';
+import Loading from '../../components/Loading/Loading';
 export default function Home() {
-  const count = sCount.use();
-
-  const handleClick = () => {
-    sCount.set((n) => (n.value += 1));
-  };
-
   return (
-    <div>
-      <h1>Home {count}</h1>
-      <button onClick={handleClick}>Up</button>
+    <div className="home">
+      <Sidebar/>
     </div>
   );
 }

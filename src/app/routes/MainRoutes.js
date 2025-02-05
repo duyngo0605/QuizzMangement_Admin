@@ -4,7 +4,8 @@ import Home from "../pages/Home";
 import Header from "../layouts/Header";
 import PageNotFound from "../layouts/PageNotFound";
 import Login from "../pages/Login";
-import ProtectedRoute from "../components/Protectedroute"
+import ProtectedRoute from "../components/Protectedroute";
+import User from "../pages/User";
 
 export default function MainRoutes() {
   return (
@@ -13,6 +14,7 @@ export default function MainRoutes() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+        <Route path="/user" element={<ProtectedRoute><User /></ProtectedRoute>} />
       </Routes>
     </BrowserRouter>
   );
