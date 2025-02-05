@@ -42,7 +42,7 @@ export default function Login() {
         <h2>Đăng nhập</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <input
+            <input value="admin" readOnly
               type="text"
               name="username"
               placeholder="Tên đăng nhập"

@@ -19,10 +19,6 @@ export default function Header() {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="logo">
-          <img 
-            src={`${process.env.PUBLIC_URL}/deerCoffeeLogo.png`} 
-            alt="Deer Coffee Logo" 
-          />
           <span className="brand-title">QuizzApp Management</span>
         </Link>
        
