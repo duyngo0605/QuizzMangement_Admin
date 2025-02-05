@@ -154,7 +154,7 @@ const User = () => {
             key: 'role',
             render: (role) => (
                 <Tag color={role === 'admin' ? 'red' : 'green'}>
-                    {role === 'admin' ? 'Quản trị viên' : 'Khách hàng'}
+                    {role === 'admin' ? 'Quản trị viên' : 'Khách'}
                 </Tag>
             ),
         },
@@ -292,7 +292,7 @@ const User = () => {
                             rules={[{ required: true, message: 'Vui lòng chọn vai trò' }]}
                         >
                             <Select disabled={hasAdmin && (!editingId || (editingId && users.find(u => u._id === editingId)?.role !== 'admin'))}>
-                                <Option value="customer">Khách hàng</Option>
+                                <Option value="customer">Khách</Option>
                                 <Option value="admin">Quản trị viên</Option>
                             </Select>
                         </Form.Item>

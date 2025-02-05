@@ -1,6 +1,7 @@
 .user-page {
     display: flex;
     min-height: 100vh;
+    margin-top: 60px;
     padding-left: 280px; /* Chiều rộng cố định của sidebar */
 }
 

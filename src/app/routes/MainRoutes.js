@@ -6,6 +6,8 @@ import PageNotFound from "../layouts/PageNotFound";
 import Login from "../pages/Login";
 import ProtectedRoute from "../components/Protectedroute";
 import User from "../pages/User";
+import Topic from "../pages/Topic";
+import TopicDetail from '../pages/Topic/partials/TopicDetail/TopicDetail';
 
 export default function MainRoutes() {
   return (
@@ -15,6 +17,8 @@ export default function MainRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
         <Route path="/user" element={<ProtectedRoute><User /></ProtectedRoute>} />
+        <Route path="/topic" element={<ProtectedRoute><Topic /></ProtectedRoute>} />
+        <Route path="/topic/:id" element={<ProtectedRoute><TopicDetail /></ProtectedRoute>} />
       </Routes>
     </BrowserRouter>
   );
