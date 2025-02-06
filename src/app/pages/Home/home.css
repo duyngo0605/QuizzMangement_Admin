@@ -1,53 +1,86 @@
 .home {
-    display: flex;
     min-height: 100vh;
-    background-color: #f5f7fb;
-  }
-  
-  .main-content {
+    display: flex;
+}
+
+.content-wrapper {
+    flex: 1;
+    padding: 24px;
+    margin-left: 280px;
+    margin-top: 64px;
+    background: #f0f2f5;
+}
+
+.page-title {
+    margin-bottom: 24px;
+    color: #1a1a1a;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.stats-overview {
+    margin-bottom: 24px;
+}
+
+.chart-card {
+    margin-bottom: 24px;
+}
+
+.ranking-card {
+    height: 100%;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.main-content {
     flex: 1;
     padding: 20px;
     margin-left: 280px;
-  }
+}
 
-  .ant-card-cover {
+.ant-card-cover {
     height: 200px;
     overflow: hidden;
-  }
+}
 
-  .ant-card-cover img {
+.ant-card-cover img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
-  .ant-tabs-nav {
+.ant-tabs-nav {
     margin-bottom: 24px;
-  }
+}
 
-  .menu-items .ant-card {
+.menu-items .ant-card {
     height: 100%;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
-  }
+}
 
-  .menu-items .ant-card:hover {
+.menu-items .ant-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 15px rgba(24, 144, 255, 0.25);
     border-color: #1890ff;
-  }
+}
 
-  .menu-items .ant-card:active {
+.menu-items .ant-card:active {
     transform: scale(0.97);
     background-color: #e6f7ff;
-  }
+}
 
-  .menu-items .ant-card {
+.menu-items .ant-card {
     position: relative;
     overflow: hidden;
-  }
+}
 
-  .menu-items .ant-card::after {
+.menu-items .ant-card::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -59,86 +92,86 @@
     border-radius: 100%;
     transform: scale(1, 1) translate(-50%);
     transform-origin: 50% 50%;
-  }
+}
 
-  .menu-items .ant-card:active::after {
+.menu-items .ant-card:active::after {
     animation: ripple 0.4s ease-out;
-  }
+}
 
-  @keyframes ripple {
+@keyframes ripple {
     0% {
-      transform: scale(0, 0);
-      opacity: 0.8;
+        transform: scale(0, 0);
+        opacity: 0.8;
     }
     100% {
-      transform: scale(40, 40);
-      opacity: 0;
+        transform: scale(40, 40);
+        opacity: 0;
     }
-  }
+}
 
-  @keyframes flash {
+@keyframes flash {
     0% {
-      background-color: transparent;
-      border-color: #d9d9d9;
+        background-color: transparent;
+        border-color: #d9d9d9;
     }
     50% {
-      background-color: #f6ffed;
-      border-color: #52c41a;
-      box-shadow: 0 0 15px rgba(82, 196, 26, 0.35);
+        background-color: #f6ffed;
+        border-color: #52c41a;
+        box-shadow: 0 0 15px rgba(82, 196, 26, 0.35);
     }
     100% {
-      background-color: transparent;
-      border-color: #d9d9d9;
+        background-color: transparent;
+        border-color: #d9d9d9;
     }
-  }
+}
 
-  .menu-items .ant-card.flash {
+.menu-items .ant-card.flash {
     animation: flash 0.8s ease-out;
-  }
+}
 
-  .menu-items .ant-card-meta-title {
+.menu-items .ant-card-meta-title {
     margin-bottom: 8px;
     font-size: 16px;
-  }
+}
 
-  .menu-items .ant-card-meta-description {
+.menu-items .ant-card-meta-description {
     color: #f5222d;
     font-weight: 500;
-  }
+}
 
-  .selected-item {
+.selected-item {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     align-items: center;
     padding: 12px 0;
     border-bottom: 1px solid #f0f0f0;
     gap: 8px;
-  }
-  
-  .selected-item > * {
+}
+
+.selected-item > * {
     display: flex;
     align-items: center;
-  }
-  
-  .selected-item > :nth-child(2) {
+}
+
+.selected-item > :nth-child(2) {
     justify-content: center;
-  }
-  
-  .selected-item span:last-child {
+}
+
+.selected-item span:last-child {
     justify-content: flex-end;
-  }
-  
-  .quantity-control {
+}
+
+.quantity-control {
     display: flex;
     align-items: center;
     gap: 8px;
-  }
-  
-  .quantity-control .ant-input-number {
-    width: 60px;
-  }
+}
 
-  .order-summary {
+.quantity-control .ant-input-number {
+    width: 60px;
+}
+
+.order-summary {
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -151,35 +184,35 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
-  }
+}
 
-  .order-summary h2 {
+.order-summary h2 {
     padding: 20px 20px 0 20px;
     margin: 0;
-  }
+}
 
-  .total {
+.total {
     position: fixed;
     bottom: 30px;
     width: calc(25% - 20px);
     margin-left: 10px;
-  }
-  
-  .total h3 {
+}
+
+.total h3 {
     color: #f5222d;
     font-size: 18px;
     margin: 10px 0;
-  }
+}
 
-  .table-select {
+.table-select {
     padding: 0 10px;
-  }
+}
 
-  .quantity-input {
+.quantity-input {
     text-align: center;
-  }
+}
 
-  .selected-items {
+.selected-items {
     flex: 1;
     overflow-y: auto;
     padding: 0 10px;
@@ -187,155 +220,154 @@
     /* Thêm style cho scrollbar */
     scrollbar-width: thin;
     scrollbar-color: #d9d9d9 #f5f5f5;
-  }
-  
-  /* Style cho scrollbar trên Chrome, Edge, và Safari */
-.selected-items::-webkit-scrollbar {
-  width: 6px;
 }
-
 
 /* Style cho scrollbar trên Chrome, Edge, và Safari */
 .selected-items::-webkit-scrollbar {
-  width: 6px;
+    width: 6px;
+}
+
+/* Style cho scrollbar trên Chrome, Edge, và Safari */
+.selected-items::-webkit-scrollbar {
+    width: 6px;
 }
 
 .selected-items::-webkit-scrollbar-track {
-  background: #f5f5f5;
-  border-radius: 3px;
+    background: #f5f5f5;
+    border-radius: 3px;
 }
 
 .selected-items::-webkit-scrollbar-thumb {
-  background-color: #d9d9d9;
-  border-radius: 3px;
+    background-color: #d9d9d9;
+    border-radius: 3px;
 }
 
 .totalHeading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0; /* Đảm bảo không có khoảng trắng thừa */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0; /* Đảm bảo không có khoảng trắng thừa */
 }
 
 .totalAmount {
-  margin-left: auto; /* Đẩy phần tử này sang cuối dòng */
+    margin-left: auto; /* Đẩy phần tử này sang cuối dòng */
 }
 
 .invoice-details {
-  padding: 10px;
+    padding: 10px;
 }
 
 .invoice-item {
-  display: flex;
-  justify-content: space-between;
-  margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
 }
 
 .voucher-info {
-  margin: 15px 0;
-  padding: 10px;
-  background-color: #f5f5f5;
-  border-radius: 4px;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
 }
 
 .total-amount {
-  margin-top: 20px;
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
 }
 
 /* Thêm styles cho bảng trong hóa đơn */
 .invoice-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 15px 0;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
 }
 
 .invoice-table th,
 .invoice-table td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
 .invoice-table th {
-  background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
 
 .invoice-table tr:nth-child(even) {
-  background-color: #fafafa;
+    background-color: #fafafa;
 }
 
 /* Cập nhật styles cho invoice-details */
 .invoice-details {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
 .invoice-header {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .voucher-info {
-  margin: 15px 0;
-  padding: 10px;
-  background-color: #f5f5f5;
-  border-radius: 4px;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
 }
 
 .total-amount {
-  margin-top: 20px;
-  border-top: 2px solid #ddd;
-  padding-top: 10px;
-  text-align: right;
+    margin-top: 20px;
+    border-top: 2px solid #ddd;
+    padding-top: 10px;
+    text-align: right;
 }
 
 /* Thêm styles cho invoice-info */
 .invoice-info {
-  margin: 20px 0;
-  padding: 10px;
-  border-bottom: 1px dashed #ddd;
+    margin: 20px 0;
+    padding: 10px;
+    border-bottom: 1px dashed #ddd;
 }
 
 /* Thêm styles cho invoice-summary */
 .invoice-summary {
-  margin-top: 20px;
-  padding: 15px;
-  background-color: #f9f9f9;
-  border-radius: 4px;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
 }
 
 .summary-row {
-  display: flex;
-  justify-content: space-between;
-  margin: 8px 0;
-  padding: 4px 0;
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    padding: 4px 0;
 }
 
 .summary-row.total {
-  margin-top: 15px;
-  padding-top: 15px;
-  border-top: 2px solid #ddd;
-  font-size: 1.2em;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #ddd;
+    font-size: 1.2em;
 }
 
 /* Cập nhật invoice-header */
 .invoice-header h1 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .invoice-header p {
-  color: #666;
-  margin: 5px 0;
+    color: #666;
+    margin: 5px 0;
 }
 
 /* Thêm styles cho invoice-footer */
 .invoice-footer {
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px dashed #ddd;
-  color: #666;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #ddd;
+    color: #666;
 }

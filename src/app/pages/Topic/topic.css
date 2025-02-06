@@ -1,8 +1,6 @@
 .Topic-page {
   display: flex;
   min-height: calc(100vh - 64px); /* Trừ đi chiều cao của header */
-  margin-top: 64px; /* Thêm margin-top bằng chiều cao của header */
-  padding-left: 280px; /* Chiều rộng cố định của sidebar */
 }
 
 .content-wrapper {
