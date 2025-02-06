@@ -1,0 +1,26 @@
+.rankings-page {
+    min-height: 100vh;
+    display: flex;
+}
+
+.page-title {
+    margin-bottom: 24px;
+    color: #1a1a1a;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.stats-overview {
+    margin-bottom: 24px;
+}
+
+.ranking-table {
+    margin-bottom: 24px;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+} 

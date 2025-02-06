@@ -18,6 +18,11 @@ export const getMenuItems = (role) => {
             icon: "topic",
             path: "/topic",
           },
+          {
+            title: "Thống kê Quiz",
+            icon: "quiz",
+            path: "/ranking"
+          }
         ];
       default:
         return [];

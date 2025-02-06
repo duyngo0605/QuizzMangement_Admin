@@ -53,12 +53,22 @@ const Home = () => {
                 <h2 className="page-title">Thống kê tổng quan</h2>
 
                 <Row gutter={[16, 16]} className="stats-overview">
-                    <Col xs={24} md={8}>
+                    <Col xs={24} md={12}>
                         <Card>
                             <Statistic
                                 title="Tổng số người dùng"
                                 value={stats?.totalUsers}
                                 prefix={<UserOutlined />}
+                            />
+                        </Card>
+                    </Col>
+                    <Col xs={24} md={12}>
+                        <Card>
+                            <Statistic
+                                title="Người dùng mới hôm nay"
+                                value={stats?.newUsersToday}
+                                prefix={<UserOutlined />}
+                                valueStyle={{ color: '#3f8600' }}
                             />
                         </Card>
                     </Col>

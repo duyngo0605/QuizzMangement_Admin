@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Layout, Menu, Avatar, Typography, Space } from 'antd';
-import { LogoutOutlined, UserOutlined, BookOutlined } from '@ant-design/icons';
+import { LogoutOutlined, UserOutlined, BookOutlined, PieChartOutlined } from '@ant-design/icons';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './sidebar.css';
 import { getMenuItems } from '../../../settings/localVar';
@@ -35,6 +35,7 @@ export default function Sidebar() {
     const iconMap = {
       'manage_accounts': <UserOutlined />,
       'topic': <BookOutlined />,
+      'quiz': <PieChartOutlined/>
       // Thêm các icon khác tương ứng ở đây
     };
     return iconMap[iconName] || <UserOutlined />;
